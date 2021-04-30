@@ -25,11 +25,12 @@ if (!is_admin()) {
     add_action( 'init', 'dblimgs_add_shortcodes' );
     add_action('wp_enqueue_scripts','dblimgs_scripts_init_front');
 } else {
+    // Editor button
     add_action('wp_enqueue_scripts','dblimgs_scripts_init_admin');
     include_once DBLIMGS_PLUGIN_PATH . '/admin/buttons.php';
 }
 
-
+// Inclusions CSS et JS front
 function dblimgs_scripts_init_front() {
     wp_register_style('dblimgs_style', DBLIMGS_PLUGIN_URL . '/front/dblimgs.css');
     wp_enqueue_style('dblimgs_style');
@@ -38,6 +39,7 @@ function dblimgs_scripts_init_front() {
 
 }
 
+// Inclusions CSS et JS admin
 function dblimgs_scripts_init_admin() {
     wp_register_style('dblimgs_style', DBLIMGS_PLUGIN_URL . '/admin/dblimgs.css');
     wp_enqueue_style('dblimgs_style');
@@ -45,6 +47,7 @@ function dblimgs_scripts_init_admin() {
     wp_enqueue_script('dblimgs_scripts');*/
 }
 
+// Editor's styles
 add_action( 'admin_init', 'dblimgs_styles_to_editor' );
 function dblimgs_styles_to_editor() {
     global $editor_styles;

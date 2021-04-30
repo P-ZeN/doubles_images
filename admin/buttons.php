@@ -4,7 +4,7 @@
 function dblimgs_add_mce_button() {
     global $typenow, $pagenow;
 
-    if ( empty( $typenow ) && !empty( $_GET['post'] ) ) {
+    if (empty($typenow) && !empty($_GET['post']) ) {
         $post = get_post( $_GET['post'] );
         $typenow = $post->post_type;
     }
@@ -32,8 +32,6 @@ add_action('admin_head', 'dblimgs_add_mce_button');
 function dblimgs_register_mce_button( $buttons ) {
     $buttons = array(
         'dblimgs_mce_button',
-        'dblimgs_mce_button_2',
-
     );
     return $buttons;
 }
@@ -43,6 +41,5 @@ function dblimgs_register_mce_button( $buttons ) {
 // the script will insert the shortcode on the click event
 function dblimgs_add_tinymce_plugin( $plugin_array ) {
     $plugin_array['dblimgs_mce_button'] = DBLIMGS_PLUGIN_URL . 'admin/dblimgs_buttons.js';
-    $plugin_array['dblimgs_mce_button_2'] = DBLIMGS_PLUGIN_URL . 'admin/dblimgs_buttons_2.js';
     return $plugin_array;
 }

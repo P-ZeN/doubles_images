@@ -6,11 +6,6 @@ function dblimgs_add_shortcodes() {
 
 function dblimgs_render($atts) {
     $html = '';
-    /*$html .= '<p class="dblimgs_dbg">';
-    foreach ($atts as $key => $value) {
-        $html .= $key . ' = ' . $value . '<br>';
-    }
-    $html .= '</p>';*/
 
     $html .= '<div class="dblimgs_main">';
     foreach ($atts as $key => $value) {
@@ -25,7 +20,6 @@ function dblimgs_render($atts) {
         }
     }
     $html .= '</div>';
-
 
     return $html;
 }

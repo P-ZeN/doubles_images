@@ -1,0 +1,67 @@
+.my-view-wrapper {
+    text-align: center;
+    line-height: 1.5em;
+    padding: 1em;
+    background-color: #0073AA;
+    font-family: monospace;
+    color: white;
+}
+
+.my-view-wrapper p {
+    margin: 0;
+    padding: 0;
+}
+
+.dblimgs_dbg {
+    padding: 20px;
+    background: #aaa;
+}
+
+.dblimgs_main {
+    padding: 0px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 3px #ccc dashed;
+    /*max-width: 97% !important;*/
+}
+
+.dblimgs_main>div {
+    /*background: #eee;*/
+    padding: 10px;
+    margin: auto;
+}
+
+.dblimgs_main img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+
+
+/*@media (max-width: 760px) {
+    .dblimgs_main {
+        flex-direction: column;
+    }
+}*/
+
+img.camouflage {
+    background: url(/wp-content/themes/jungle-theme/images/camouflage.jpg);
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+img.border_scratch {
+    border: 10px solid !important;
+    border-image: url('../front/img/border_vf_1.svg') 100 100 100 100 stretch !important;
+    border-image-width: 20% !important;
+    overflow: visible;
+}
+
+img.border_scratch:nth-of-type(n+1) {
+    border-image-source: url('../front/img/border_vf_2.svg') !important;
+}

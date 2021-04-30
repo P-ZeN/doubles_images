@@ -1,0 +1,1 @@
+Plugin Wordpress pour ajouter des images juxtaposée dans un article u une page depuis l'éditeur
